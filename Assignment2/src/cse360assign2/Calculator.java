@@ -34,7 +34,7 @@ public class Calculator {
 	 * @return the current total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class Calculator {
 	 * @param value the value of the integer being added
 	 */
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	/**
@@ -52,7 +52,7 @@ public class Calculator {
 	 * @param value the value that is being subtracted
 	 */
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	/**
@@ -61,7 +61,7 @@ public class Calculator {
 	 * @param value the value to multiply the total by
 	 */
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	/**
@@ -71,7 +71,10 @@ public class Calculator {
 	 * @param value the value to divide the total by
 	 */
 	public void divide (int value) {
-		
+		if (value == 0)
+			total = 0;
+		else
+			total /= value;
 	}
 	
 	/**
